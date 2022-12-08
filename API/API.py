@@ -1,1 +1,2 @@
 API_MAIN_KEY = ""
+CHAT_ID = ""

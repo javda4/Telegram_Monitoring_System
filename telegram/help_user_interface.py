@@ -63,7 +63,7 @@ class Button:
             if pygame.mouse.get_pressed()[0]:
                 if self.rect.collidepoint(x, y):
                     token = API_KEY
-                    chat_id = "5748949426"
+                    chat_id = api.CHAT_ID
                     url_req = "https://api.telegram.org/bot" + token + "/sendMessage" + "?chat_id=" + chat_id + "&text=" + alert
                     results = requests.get(url_req)
                     print(results.json())
@@ -75,7 +75,7 @@ class Button:
                 if self.rect.collidepoint(x, y):
                     cam_image.image_monitor()
                     token = API_KEY
-                    chat_id = "5748949426"
+                    chat_id = api.CHAT_ID
                     file = {'photo': open("image.jpg", "rb")}
                     url_req = requests.post("https://api.telegram.org/bot" + token + "/sendPhoto?chat_id="
                                             + chat_id, files=file)
@@ -88,7 +88,7 @@ class Button:
                 if self.rect.collidepoint(x, y):
                     cam_video.video_monitor()
                     token = API_KEY
-                    chat_id = "5748949426"
+                    chat_id = api.CHAT_ID
                     file = {'video': open("video.mp4", "rb")}
                     url_req = requests.post("https://api.telegram.org/bot" + token + "/sendVideo?chat_id="
                                             + chat_id, files=file)
