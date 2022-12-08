@@ -12,7 +12,7 @@ msgbot = Dispatcher(bot)
 @msgbot.message_handler(commands=['start'])
 async def welcome(message: types.Message):
     await message.reply("Commands are /image (takes image of current environment) /video (takes video of current "
-                        "environment) and /lastmove (sends a video of the last motion detection)")
+                        "environment)")
 
 
 @msgbot.message_handler(commands=['image', 'help'])
