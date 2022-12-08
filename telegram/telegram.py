@@ -24,7 +24,7 @@ async def img(message: types.Message):
 
 @msgbot.message_handler(commands=['video', 'help'])
 async def vid(message: types.Message):
-    curr_video.curr_video_monitor()
+    curr_video.video_monitor()
     curr_video_cap = open("video.mp4", "rb")
     await bot.send_video(message.chat.id, video=curr_video_cap)
 
